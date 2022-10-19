@@ -8,8 +8,8 @@ package genericLibraries;
 
 public interface IConstantPath {
 	
-	String PROPERTY_FILE_PATH = "";
-	String EXCEL_FILE_PATH = "";
-	String DATABASE_URL="";
+	String PROPERTY_FILE_PATH = "./src/test/resources/commonData.properties";
+	String EXCEL_FILE_PATH = "./src/test/resources/VtigerCRMTestData.xlsx";
+	String DATABASE_URL="jdbc:mysql://localhost:3306/advsel";
 
 }

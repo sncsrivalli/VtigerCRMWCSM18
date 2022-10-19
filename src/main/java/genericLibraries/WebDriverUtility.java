@@ -3,6 +3,7 @@ package genericLibraries;
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
@@ -137,6 +138,35 @@ public class WebDriverUtility {
 	 */
 	public void alertPopup() {
 		driver.switchTo().alert().accept();
+	}
+	
+	/**
+	 * This method is used to get parent window title
+	 */
+	public String getParentWindow() {
+		return driver.getWindowHandle();
+	}
+	
+	/**
+	 * This method is used to switch to specified window
+	 * @param windowID 
+	 */
+	public void switchToWindow(String windowID) {
+		driver.switchTo().window(windowID);
+	}
+	
+	/**
+	 * This method is used to handle child browser popup
+	 * @param expectedTitle 
+	 */
+	public void handleChildBrowserPopup(Object expectedTitle) {
+		Set<String> windowTitles = driver.getWindowHandles();
+		for(String windowID : windowTitles) {
+			driver.switchTo().window(windowID);
+			String actualTitle = driver.getTitle();
+			if (actualTitle.equals(expectedTitle))
+				break;
+		}
 	}
 	
 	/**

@@ -17,11 +17,12 @@ public class PropertyFileUtility {
 	
 	/**
 	 * This method initializes property file
+	 * @param filePath 
 	 */
-	public void propertyFileInitialization() {
+	public void propertyFileInitialization(String filePath) {
 		FileInputStream fis = null;
 		try {
-			fis = new FileInputStream(IConstantPath.PROPERTY_FILE_PATH);
+			fis = new FileInputStream(filePath);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}

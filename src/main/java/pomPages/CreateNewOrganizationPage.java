@@ -53,7 +53,7 @@ public class CreateNewOrganizationPage {
 		
 	}
 	
-	public WebElement getPageHeader() {
-		return pageHeader;
+	public String getPageHeader() {
+		return pageHeader.getText();
 	}
 }

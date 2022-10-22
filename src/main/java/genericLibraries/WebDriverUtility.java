@@ -6,6 +6,7 @@ import java.time.Duration;
 import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -167,6 +168,17 @@ public class WebDriverUtility {
 			if (actualTitle.equals(expectedTitle))
 				break;
 		}
+	}
+	
+	/**
+	 * This method is used to convert String to dynamic Xpath
+	 * @param dynamicPath 
+	 * @param replaceData 
+	 */
+	public WebElement convertStringToDynamicXpath(String dynamicPath, String replaceData) {
+		String requiredPath = String.format(dynamicPath,replaceData);
+		WebElement tab = driver.findElement(By.xpath(requiredPath));
+		return tab;
 	}
 	
 	/**

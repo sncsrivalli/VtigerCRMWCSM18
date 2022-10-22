@@ -41,16 +41,16 @@ public class OrganizationsPage {
 	 * This method is used to get the newly created organization from table 
 	 * @return
 	 */
-	public WebElement getNewOrganization() {
-		return newOrganization;
+	public String getNewOrganization() {
+		return newOrganization.getText();
 	}
 
 	/**
 	 * This method is used to get the organizations page header
 	 * @return
 	 */
-	public WebElement getPageHeader() {
-		return pageHeader;
+	public String getPageHeader() {
+		return pageHeader.getText();
 	}
 	
 	

@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import genericLibraries.TabNames;
 import genericLibraries.WebDriverUtility;
 
 /**
@@ -16,7 +17,7 @@ import genericLibraries.WebDriverUtility;
 public class HomePage {
 	
 	//Declaration
-	//private String dynamicPath = "//a[.='%s']";
+	private String dynamicPath = "//a[.='%s']";
 	
 	@FindBy(xpath="//img[@src='themes/softed/images/user.PNG']")
 	private WebElement administratorImage;
@@ -33,9 +34,10 @@ public class HomePage {
 	 * @param webdriver
 	 * @param tabName
 	 */
-//	public void clickRequiredTab(WebDriverUtility webdriver, TabNames tabName) {
-//		webdriver.convertStringToDynamicXpath(dynamicPath, tabName.getTabName()).click();
-//	}
+	public void clickRequiredTab(WebDriverUtility webdriver, TabNames tabName) {
+		webdriver.convertStringToDynamicXpath(dynamicPath, tabName.getTabName()).click();
+	}
+	
 	
 	
 	public void mouseHoverToAdministratorImage(WebDriverUtility webdriver) {

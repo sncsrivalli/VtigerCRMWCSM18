@@ -40,7 +40,7 @@ public class PropertyFileUtility {
 	 * @throws IOException 
 	 */
 	
-	public String getDataFromPropertyFile(String key) throws IOException {
+	public String getDataFromPropertyFile(String key) {
 		return property.getProperty(key);
 	}
 

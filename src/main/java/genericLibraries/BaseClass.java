@@ -8,9 +8,16 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
+import pomPages.ContactsPage;
+import pomPages.CreateNewContactPage;
+import pomPages.CreateNewLeadPage;
 import pomPages.CreateNewOrganizationPage;
+import pomPages.DuplicatingLeadPage;
 import pomPages.HomePage;
+import pomPages.LeadsPage;
 import pomPages.LoginPage;
+import pomPages.NewContactInfoPage;
+import pomPages.NewLeadInfoPage;
 import pomPages.NewOrganizationInfoPage;
 import pomPages.OrganizationsPage;
 
@@ -26,6 +33,13 @@ public class BaseClass {
 	protected OrganizationsPage organizationPage;
 	protected CreateNewOrganizationPage createOrganization;
 	protected NewOrganizationInfoPage organizationInfo;
+	protected ContactsPage contactsPage;
+	protected CreateNewContactPage createContact;
+	protected NewContactInfoPage newContactInfo;
+	protected LeadsPage leadPage;
+	protected CreateNewLeadPage createLead;
+	protected NewLeadInfoPage newLead;
+	protected DuplicatingLeadPage duplicateLead;
 	
 	//@BeforeSuite
 	
@@ -60,6 +74,14 @@ public class BaseClass {
 		organizationPage = new OrganizationsPage(driver);
 		createOrganization = new CreateNewOrganizationPage(driver);
 		organizationInfo = new NewOrganizationInfoPage(driver);
+		contactsPage = new ContactsPage(driver);
+		createContact = new CreateNewContactPage(driver);
+		newContactInfo = new NewContactInfoPage(driver);
+		leadPage = new LeadsPage(driver);
+		createLead = new CreateNewLeadPage(driver);
+		newLead = new NewLeadInfoPage(driver);
+		duplicateLead = new DuplicatingLeadPage(driver);
+		
 
 		String username = property.getDataFromPropertyFile("username");
 		String password = property.getDataFromPropertyFile("password");

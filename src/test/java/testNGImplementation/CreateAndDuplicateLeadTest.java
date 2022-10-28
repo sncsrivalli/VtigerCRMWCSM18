@@ -1,6 +1,7 @@
 package testNGImplementation;
 
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import genericLibraries.BaseClass;
 import genericLibraries.IConstantPath;
@@ -10,46 +11,27 @@ public class CreateAndDuplicateLeadTest extends BaseClass {
 
 	@Test
 	public void createAndDuplicateLeadTest() {
-		
+		SoftAssert s = new SoftAssert();
 		home.clickRequiredTab(webdriver, TabNames.LEADS);
 		leadPage.clickPlusButton();
-		
-		if (createLead.getPageHeader().contains("Creating New Lead"))
-			System.out.println("Pass : Creating new lead page is displayed");
-		else
-			System.out.println("Fail : Creating new lead page is not displayed");
+		s.assertTrue(createLead.getPageHeader().contains("Creating New Lead"),"Fail : Creating new lead page is not displayed");
 		
 		String leadName = createLead.createLead(webdriver, excel, javaUtility);
-		
-		if (newLead.getPageHeader().contains(leadName))
-			System.out.println("Pass : New lead created successfully");
-		else
-			System.out.println("Fail : Lead is not created");
+		s.assertTrue(newLead.getPageHeader().contains(leadName),"Fail : Lead is not created");
 		
 		newLead.clickDuplicateButton();
-		
-		if(duplicateLead.getPageHeader().contains(leadName)) 
-			System.out.println("Pass : Duplicating page displayed");
-		else
-			System.out.println("Fail : Duplicating page is not displayed");
+		s.assertTrue(duplicateLead.getPageHeader().contains(leadName),"Fail : Duplicating page is not displayed");
 		
 		String newLastName = duplicateLead.duplicatingLead(excel, javaUtility);
-		
-		if (newLead.getPageHeader().contains(newLastName))
-			System.out.println("Pass : New lead created successfully");
-		else
-			System.out.println("Fail : Lead is not created");
+		s.assertTrue(newLead.getPageHeader().contains(newLastName),"Fail : Lead is not created");
 		
 		newLead.clickLeads();
 		
-		if(leadPage.getLastLeadName().equals(newLastName)) {
-			System.out.println("Test Case passed");
+		if(leadPage.getLastLeadName().equals(newLastName)) 			
 			excel.writeDataIntoExcel("TestData", "Pass", IConstantPath.EXCEL_FILE_PATH, "Create Lead");
-		}
-			
-		else {
-			System.out.println("Test Case Failed");
+		else 	
 			excel.writeDataIntoExcel("TestData", "Fail", IConstantPath.EXCEL_FILE_PATH, "Create Lead");
-		}
+		s.assertTrue(leadPage.getLastLeadName().equals(newLastName), "Fail : Test Case failed");
+		s.assertAll();
 	}
 }

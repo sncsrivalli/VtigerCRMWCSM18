@@ -1,6 +1,7 @@
 package genericLibraries;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -62,10 +63,11 @@ public class BaseClass {
 		driver = webdriver.openBrowserAndApplication(browser, url, time);
 		
 		login = new LoginPage(driver);
-		if (login.getLogo().isDisplayed())
-			System.out.println("Pass: Vtiger login page is diplayed");
-		else
-			System.out.println("Fail: Vtiger login page is not displayed");
+		Assert.assertTrue(login.getLogo().isDisplayed(),"Fail: Vtiger login page is not displayed");
+//		if (login.getLogo().isDisplayed())
+//			System.out.println("Pass: Vtiger login page is diplayed");
+//		else
+//			System.out.println("Fail: Vtiger login page is not displayed");
 	}
 	
 	@BeforeMethod
@@ -86,10 +88,11 @@ public class BaseClass {
 		String username = property.getDataFromPropertyFile("username");
 		String password = property.getDataFromPropertyFile("password");
 		login.loginToApplication(username, password);
-		if (driver.getTitle().contains("Administrator"))
-			System.out.println("Pass : Login successful");
-		else
-			System.out.println("Fail : Login not successful");
+		Assert.assertTrue(driver.getTitle().contains("Administrator"), "Fail : Login not successful");
+//		if (driver.getTitle().contains("Administrator"))
+//			System.out.println("Pass : Login successful");
+//		else
+//			System.out.println("Fail : Login not successful");
 	}
 	
 	@AfterMethod

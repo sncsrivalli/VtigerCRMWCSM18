@@ -41,6 +41,8 @@ public class BaseClass {
 	protected CreateNewLeadPage createLead;
 	protected NewLeadInfoPage newLead;
 	protected DuplicatingLeadPage duplicateLead;
+	public static WebDriver sdriver;
+	public static JavaUtility sjavaUtility;
 	
 	//@BeforeSuite
 	
@@ -61,13 +63,10 @@ public class BaseClass {
 		long time = Long.parseLong(property.getDataFromPropertyFile("timeouts")); 
 		
 		driver = webdriver.openBrowserAndApplication(browser, url, time);
-		
+		sdriver = driver;
+		sjavaUtility= javaUtility;
 		login = new LoginPage(driver);
 		Assert.assertTrue(login.getLogo().isDisplayed(),"Fail: Vtiger login page is not displayed");
-//		if (login.getLogo().isDisplayed())
-//			System.out.println("Pass: Vtiger login page is diplayed");
-//		else
-//			System.out.println("Fail: Vtiger login page is not displayed");
 	}
 	
 	@BeforeMethod
@@ -89,10 +88,6 @@ public class BaseClass {
 		String password = property.getDataFromPropertyFile("password");
 		login.loginToApplication(username, password);
 		Assert.assertTrue(driver.getTitle().contains("Administrator"), "Fail : Login not successful");
-//		if (driver.getTitle().contains("Administrator"))
-//			System.out.println("Pass : Login successful");
-//		else
-//			System.out.println("Fail : Login not successful");
 	}
 	
 	@AfterMethod

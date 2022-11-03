@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="none" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="genericLibraries.ListenerImplementation"/>
+    <listener class-name="genericLibraries.RetryToListenerConversion"/>
+  </listeners>
+  <test parallel="none" name="Test(failed)">
+    <classes>
+      <class name="testNGImplementation.CreateContactTest">
+        <methods>
+          <include name="createContactTest"/>
+          <include name="classSetup"/>
+        </methods>
+      </class> <!-- testNGImplementation.CreateContactTest -->
+      <class name="testNGImplementation.CreateAndDuplicateLeadTest">
+        <methods>
+          <include name="testSetup"/>
+          <include name="methodTearDown"/>
+          <include name="classSetup"/>
+          <include name="classTearDown"/>
+          <include name="methodSetup"/>
+        </methods>
+      </class> <!-- testNGImplementation.CreateAndDuplicateLeadTest -->
+      <class name="testNGImplementation.CreateOrganizationTest">
+        <methods>
+          <include name="createOrganizationTest"/>
+        </methods>
+      </class> <!-- testNGImplementation.CreateOrganizationTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

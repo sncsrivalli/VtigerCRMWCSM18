@@ -32,7 +32,7 @@ public class CreateOrganizationTest extends BaseClass{
 			excel.writeDataIntoExcel("TestData", "Fail", IConstantPath.EXCEL_FILE_PATH, "Create Organization");
 		
 		s.assertTrue(organizationPage.getNewOrganization().equalsIgnoreCase(newOrganizationName), "Test Case Failed");
-		s.assertFalse(true);
+		
 		s.assertAll();	
 	}
 

@@ -3,9 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="testNGImplementation.CreateAndDuplicateLeadTest"/>
-      <class name="testNGImplementation.CreateContactTest"/>
-      <class name="testNGImplementation.CreateOrganizationTest"/>
+      <class name="mavenCommandLineParameters.GetParametersFrommvncmdTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

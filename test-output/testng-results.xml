@@ -2,41 +2,41 @@
 <testng-results total="3" passed="1" failed="0" skipped="2">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-11-03T05:38:21Z" name="Suite" finished-at="2022-11-03T05:39:01Z" duration-ms="40004">
+  <suite started-at="2022-11-04T08:24:30Z" name="Suite" finished-at="2022-11-04T08:25:07Z" duration-ms="36835">
     <groups>
     </groups>
-    <test started-at="2022-11-03T05:38:21Z" name="Test" finished-at="2022-11-03T05:39:01Z" duration-ms="40004">
+    <test started-at="2022-11-04T08:24:30Z" name="Test" finished-at="2022-11-04T08:25:07Z" duration-ms="36835">
       <class name="testNGImplementation.CreateOrganizationTest">
-        <test-method is-config="true" signature="classSetup()[pri:0, instance:testNGImplementation.CreateOrganizationTest@51fadaff]" started-at="2022-11-03T11:09:01Z" name="classSetup" finished-at="2022-11-03T11:09:01Z" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="classSetup()[pri:0, instance:testNGImplementation.CreateOrganizationTest@51fadaff]" started-at="2022-11-04T13:55:07Z" name="classSetup" finished-at="2022-11-04T13:55:07Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- classSetup -->
-        <test-method signature="createOrganizationTest()[pri:0, instance:testNGImplementation.CreateOrganizationTest@51fadaff]" started-at="2022-11-03T11:09:01Z" name="createOrganizationTest" finished-at="2022-11-03T11:09:01Z" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createOrganizationTest -->
-        <test-method is-config="true" signature="methodTearDown()[pri:0, instance:testNGImplementation.CreateOrganizationTest@51fadaff]" started-at="2022-11-03T11:09:01Z" name="methodTearDown" finished-at="2022-11-03T11:09:01Z" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- methodTearDown -->
-        <test-method is-config="true" signature="methodSetup()[pri:0, instance:testNGImplementation.CreateOrganizationTest@51fadaff]" started-at="2022-11-03T11:09:01Z" name="methodSetup" finished-at="2022-11-03T11:09:01Z" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="methodSetup()[pri:0, instance:testNGImplementation.CreateOrganizationTest@51fadaff]" started-at="2022-11-04T13:55:07Z" name="methodSetup" finished-at="2022-11-04T13:55:07Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- methodSetup -->
-        <test-method is-config="true" signature="classTearDown()[pri:0, instance:testNGImplementation.CreateOrganizationTest@51fadaff]" started-at="2022-11-03T11:09:01Z" name="classTearDown" finished-at="2022-11-03T11:09:01Z" duration-ms="0" status="SKIP">
+        <test-method signature="createOrganizationTest()[pri:0, instance:testNGImplementation.CreateOrganizationTest@51fadaff]" started-at="2022-11-04T13:55:07Z" name="createOrganizationTest" finished-at="2022-11-04T13:55:07Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createOrganizationTest -->
+        <test-method is-config="true" signature="classTearDown()[pri:0, instance:testNGImplementation.CreateOrganizationTest@51fadaff]" started-at="2022-11-04T13:55:07Z" name="classTearDown" finished-at="2022-11-04T13:55:07Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- classTearDown -->
+        <test-method is-config="true" signature="methodTearDown()[pri:0, instance:testNGImplementation.CreateOrganizationTest@51fadaff]" started-at="2022-11-04T13:55:07Z" name="methodTearDown" finished-at="2022-11-04T13:55:07Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
       </class> <!-- testNGImplementation.CreateOrganizationTest -->
       <class name="testNGImplementation.CreateContactTest">
-        <test-method is-config="true" signature="classSetup()[pri:0, instance:testNGImplementation.CreateContactTest@62010f5c]" started-at="2022-11-03T11:09:01Z" name="classSetup" finished-at="2022-11-03T11:09:01Z" duration-ms="0" status="FAIL">
+        <test-method is-config="true" signature="classSetup()[pri:0, instance:testNGImplementation.CreateContactTest@62010f5c]" started-at="2022-11-04T13:55:07Z" name="classSetup" finished-at="2022-11-04T13:55:07Z" duration-ms="0" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <message>
-              <![CDATA[Cannot invoke "genericLibraries.PropertyFileUtility.propertyFileInitialization(String)" because "this.property" is null]]>
+              <![CDATA[Cannot invoke "genericLibraries.ExcelUtility.excelFileInitialization(String)" because "this.excel" is null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "genericLibraries.PropertyFileUtility.propertyFileInitialization(String)" because "this.property" is null
-	at genericLibraries.BaseClass.classSetup(BaseClass.java:59)
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "genericLibraries.ExcelUtility.excelFileInitialization(String)" because "this.excel" is null
+	at genericLibraries.BaseClass.classSetup(BaseClass.java:62)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -67,49 +67,49 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- classSetup -->
-        <test-method is-config="true" signature="methodSetup()[pri:0, instance:testNGImplementation.CreateContactTest@62010f5c]" started-at="2022-11-03T11:09:01Z" name="methodSetup" finished-at="2022-11-03T11:09:01Z" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="methodSetup()[pri:0, instance:testNGImplementation.CreateContactTest@62010f5c]" started-at="2022-11-04T13:55:07Z" name="methodSetup" finished-at="2022-11-04T13:55:07Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- methodSetup -->
-        <test-method signature="createContactTest()[pri:0, instance:testNGImplementation.CreateContactTest@62010f5c]" started-at="2022-11-03T11:09:01Z" name="createContactTest" finished-at="2022-11-03T11:09:01Z" duration-ms="2" status="SKIP">
+        <test-method is-config="true" signature="methodTearDown()[pri:0, instance:testNGImplementation.CreateContactTest@62010f5c]" started-at="2022-11-04T13:55:07Z" name="methodTearDown" finished-at="2022-11-04T13:55:07Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method is-config="true" signature="classTearDown()[pri:0, instance:testNGImplementation.CreateContactTest@62010f5c]" started-at="2022-11-04T13:55:07Z" name="classTearDown" finished-at="2022-11-04T13:55:07Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- classTearDown -->
+        <test-method signature="createContactTest()[pri:0, instance:testNGImplementation.CreateContactTest@62010f5c]" started-at="2022-11-04T13:55:07Z" name="createContactTest" finished-at="2022-11-04T13:55:07Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createContactTest -->
-        <test-method is-config="true" signature="methodTearDown()[pri:0, instance:testNGImplementation.CreateContactTest@62010f5c]" started-at="2022-11-03T11:09:01Z" name="methodTearDown" finished-at="2022-11-03T11:09:01Z" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- methodTearDown -->
-        <test-method is-config="true" signature="classTearDown()[pri:0, instance:testNGImplementation.CreateContactTest@62010f5c]" started-at="2022-11-03T11:09:01Z" name="classTearDown" finished-at="2022-11-03T11:09:01Z" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- classTearDown -->
       </class> <!-- testNGImplementation.CreateContactTest -->
       <class name="testNGImplementation.CreateAndDuplicateLeadTest">
-        <test-method is-config="true" signature="testSetup()[pri:0, instance:testNGImplementation.CreateAndDuplicateLeadTest@70f02c32]" started-at="2022-11-03T11:08:22Z" name="testSetup" finished-at="2022-11-03T11:08:22Z" duration-ms="10" status="PASS">
+        <test-method is-config="true" signature="testSetup()[pri:0, instance:testNGImplementation.CreateAndDuplicateLeadTest@70f02c32]" started-at="2022-11-04T13:54:31Z" name="testSetup" finished-at="2022-11-04T13:54:31Z" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSetup -->
-        <test-method is-config="true" signature="classSetup()[pri:0, instance:testNGImplementation.CreateAndDuplicateLeadTest@70f02c32]" started-at="2022-11-03T11:08:22Z" name="classSetup" finished-at="2022-11-03T11:08:28Z" duration-ms="6626" status="PASS">
+        <test-method is-config="true" signature="classSetup()[pri:0, instance:testNGImplementation.CreateAndDuplicateLeadTest@70f02c32]" started-at="2022-11-04T13:54:31Z" name="classSetup" finished-at="2022-11-04T13:54:36Z" duration-ms="4935" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- classSetup -->
-        <test-method is-config="true" signature="methodSetup()[pri:0, instance:testNGImplementation.CreateAndDuplicateLeadTest@70f02c32]" started-at="2022-11-03T11:08:28Z" name="methodSetup" finished-at="2022-11-03T11:08:33Z" duration-ms="4777" status="PASS">
+        <test-method is-config="true" signature="methodSetup()[pri:0, instance:testNGImplementation.CreateAndDuplicateLeadTest@70f02c32]" started-at="2022-11-04T13:54:36Z" name="methodSetup" finished-at="2022-11-04T13:54:40Z" duration-ms="4761" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- methodSetup -->
-        <test-method signature="createAndDuplicateLeadTest()[pri:0, instance:testNGImplementation.CreateAndDuplicateLeadTest@70f02c32]" started-at="2022-11-03T11:08:33Z" name="createAndDuplicateLeadTest" finished-at="2022-11-03T11:08:57Z" duration-ms="24510" status="PASS">
+        <test-method signature="createAndDuplicateLeadTest()[pri:0, instance:testNGImplementation.CreateAndDuplicateLeadTest@70f02c32]" started-at="2022-11-04T13:54:40Z" name="createAndDuplicateLeadTest" finished-at="2022-11-04T13:55:04Z" duration-ms="23858" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createAndDuplicateLeadTest -->
-        <test-method is-config="true" signature="methodTearDown()[pri:0, instance:testNGImplementation.CreateAndDuplicateLeadTest@70f02c32]" started-at="2022-11-03T11:08:58Z" name="methodTearDown" finished-at="2022-11-03T11:09:00Z" duration-ms="2955" status="PASS">
+        <test-method is-config="true" signature="methodTearDown()[pri:0, instance:testNGImplementation.CreateAndDuplicateLeadTest@70f02c32]" started-at="2022-11-04T13:55:04Z" name="methodTearDown" finished-at="2022-11-04T13:55:07Z" duration-ms="2539" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- methodTearDown -->
-        <test-method is-config="true" signature="classTearDown()[pri:0, instance:testNGImplementation.CreateAndDuplicateLeadTest@70f02c32]" started-at="2022-11-03T11:09:00Z" name="classTearDown" finished-at="2022-11-03T11:09:01Z" duration-ms="665" status="PASS">
+        <test-method is-config="true" signature="classTearDown()[pri:0, instance:testNGImplementation.CreateAndDuplicateLeadTest@70f02c32]" started-at="2022-11-04T13:55:07Z" name="classTearDown" finished-at="2022-11-04T13:55:07Z" duration-ms="410" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- classTearDown -->
-        <test-method is-config="true" signature="testTearDown()[pri:0, instance:testNGImplementation.CreateAndDuplicateLeadTest@70f02c32]" started-at="2022-11-03T11:09:01Z" name="testTearDown" finished-at="2022-11-03T11:09:01Z" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="testTearDown()[pri:0, instance:testNGImplementation.CreateAndDuplicateLeadTest@70f02c32]" started-at="2022-11-04T13:55:07Z" name="testTearDown" finished-at="2022-11-04T13:55:07Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testTearDown -->

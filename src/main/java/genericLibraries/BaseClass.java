@@ -26,7 +26,7 @@ public class BaseClass {
 	
 	protected WebDriverUtility webdriver;
 	protected JavaUtility javaUtility;
-	protected PropertyFileUtility property;
+	private PropertyFileUtility property;
 	protected ExcelUtility excel;
 	protected WebDriver driver;
 	protected LoginPage login ;
@@ -48,15 +48,17 @@ public class BaseClass {
 	
 	@BeforeTest
 	public void testSetup() {
+		
 		webdriver = new WebDriverUtility();
 		javaUtility = new JavaUtility();
 		property = new PropertyFileUtility();
+		property.propertyFileInitialization(IConstantPath.PROPERTY_FILE_PATH);
 		excel = new ExcelUtility();
 	}
 	
 	@BeforeClass
 	public void classSetup() {
-		property.propertyFileInitialization(IConstantPath.PROPERTY_FILE_PATH);
+//		property.propertyFileInitialization(IConstantPath.PROPERTY_FILE_PATH);
 		excel.excelFileInitialization(IConstantPath.EXCEL_FILE_PATH);
 		String browser = property.getDataFromPropertyFile("browser");
 		String url = property.getDataFromPropertyFile("url");
